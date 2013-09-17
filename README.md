@@ -160,6 +160,19 @@ Take a look at the load:defaults (bottom of file) task for options you can set. 
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 ```
 
+If you want to specify a different cron user than the deployment user, you can do like this:
+
+```ruby
+set :whenever_sudo_as, 'cron_user'
+require "whenever/capistrano"
+```
+It executes the command as 'cron_user' with sudo.
+If you are using rvm, adding this line might be helpful, too.
+
+```ruby
+set :whenever_sudo, 'rvmsudo'
+```
+
 ### Capistrano roles
 
 The first thing to know about the new roles support is that it is entirely
