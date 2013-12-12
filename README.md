@@ -1,5 +1,7 @@
 Whenever is a Ruby gem that provides a clear syntax for writing and deploying cron jobs.
 
+__This fork__ merges [this pull request](https://github.com/javan/whenever/pull/386) to allow setting the cron user.
+
 ### Installation
 
 ```sh
